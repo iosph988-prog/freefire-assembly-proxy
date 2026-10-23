@@ -1,0 +1,17 @@
+{
+  "original_uncompressed_bytes": 147904,
+  "original_sha1b64": "MN/boYvloTwVu9f1/wHEnfC0znY=",
+  "base_ifix_bytes": 12542,
+  "base_sha256": "4f57dcd65e89067bd289bde9c18b4482c447a70f8fc094dda4c4bd14d9909349",
+  "original_ifix_fixes": 71,
+  "base_ifix_fixes": 3,
+  "merged_ifix_fixes": 74,
+  "original_ifix_methods": 130,
+  "merged_ifix_methods": 137,
+  "merged_asset_bytes": 160112,
+  "merged_asset_sha256": "babb80ac7952e7bc23c734121622d1c46bd1bb40de8f5e5234facfb20d7665ec",
+  "gzip_bytes": 32853,
+  "gzip_sha1b64": "fEuYSXvor4kDum2ym5/7f6TdXw8=",
+  "fileinfo_row": "codepatch/assembly-csharp-patch,BB8/Fb0Swh7broNZ8TXzM4Wc71E=,160112,3,fEuYSXvor4kDum2ym5/7f6TdXw8=,32853,True,0",
+  "caveat": "Structural tests only. No iOS runtime test, iOS localConfig path compatibility, asset trust or upstream compression scheme verification."
+}
