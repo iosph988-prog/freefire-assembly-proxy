@@ -8,10 +8,11 @@ import sys
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent
-# Restrict TLS interception to game hot-update domains; other connections
-# (including login and Apple) stay encrypted end-to-end and pass through.
+# Restrict TLS interception to game hot-update domains; other HTTPS connections
+# stay encrypted end-to-end and pass through. Allow Apple's HTTP-only iOS
+# connectivity probe on port 80 so Wi-Fi does not report "No Internet".
 # Supports core-bs.freefiremobile.com and dl.gmc.freefiremobile.com etc.
-ASSET_CDN_RE = r'(?i)^(?:core|dl)[.-][a-z0-9-]+\.freefiremobile\.com(?::443)?$'
+ASSET_CDN_RE = r'(?i)^(?:(?:core|dl)[.-][a-z0-9-]+\.freefiremobile\.com(?::443)?|captive\.apple\.com:80)$'
 
 def proxy_auth_args(username: str | None, password: str | None) -> list[str]:
     """Return mitmproxy auth arguments from Railway-provided credentials."""
